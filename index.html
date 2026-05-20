@@ -1,0 +1,210 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copilot for College</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        :root {
+            --background: #050810;
+            --accent: #638cff;
+            --text: #ffffff;
+            --glass: rgba(255, 255, 255, 0.1);
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        /* Glassmorphism */
+        .glass {
+            background: var(--glass);
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+        }
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        /* Features Section */
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .feature {
+            margin: 20px;
+            width: calc(33.33% - 20px);
+            min-width: 200px;
+        }
+        .feature h2 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .feature p {
+            font-size: 16px;
+        }
+        /* How it Works Section */
+        .how-it-works {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .how-it-works h2 {
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .how-it-works p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        /* CTA Section */
+        .cta {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .cta button {
+            background-color: var(--accent);
+            color: var(--text);
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 10px;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        /* Email Signup Form */
+        .email-signup {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .email-signup input {
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 300px;
+        }
+        .email-signup button {
+            background-color: var(--accent);
+            color: var(--text);
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        /* Footer */
+        .footer {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .footer p {
+            font-size: 14px;
+        }
+        /* Responsive Design */
+        @media only screen and (max-width: 768px) {
+            .feature {
+                width: calc(50% - 20px);
+            }
+        }
+        @media only screen and (max-width: 480px) {
+            .feature {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero glass">
+        <h1>🚀 Copilot for College</h1>
+        <p>The smartest way to building a copilot for college where students can ask any questions and get instant correct answers</p>
+        <div class="email-signup">
+            <input type="email" placeholder="Enter your email" />
+            <button>📧 Sign up</button>
+        </div>
+    </section>
+    <!-- Features Section -->
+    <section class="features">
+        <div class="feature glass">
+            <h2>📚 Instant Answers</h2>
+            <p>Get instant answers to any question you have, 24/7</p>
+        </div>
+        <div class="feature glass">
+            <h2>🤖 AI-Powered</h2>
+            <p>Our AI-powered copilot provides accurate and reliable answers</p>
+        </div>
+        <div class="feature glass">
+            <h2>📊 Personalized Learning</h2>
+            <p>Our copilot provides personalized learning recommendations based on your needs</p>
+        </div>
+    </section>
+    <!-- How it Works Section -->
+    <section class="how-it-works glass">
+        <h2>🤔 How it Works</h2>
+        <p>Our copilot uses natural language processing to understand your questions and provide accurate answers</p>
+    </section>
+    <!-- CTA Section -->
+    <section class="cta">
+        <button>🚀 Get Started</button>
+    </section>
+    <!-- Footer -->
+    <section class="footer">
+        <p>📧 Contact us: <a href="mailto:support@copilotforcollege.com">support@copilotforcollege.com</a></p>
+    </section>
+    <script>
+        // Add event listener to email signup form
+        const emailSignupForm = document.querySelector('.email-signup');
+        emailSignupForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = emailSignupForm.querySelector('input').value;
+            // Add email to mailing list or database
+            console.log(`Email signed up: ${email}`);
+        });
+    </script>
+</body>
+</html>
+```
